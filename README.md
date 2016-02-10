@@ -4,10 +4,10 @@ The Frontend Pattern Library Template is a KSS template for the Frontend Incubat
  
 ## Requirements
 
-* KSS (kss-node)  ```$ npm i kss -g```
+* Gulp and SASS
 
 ## Run
 
 ```
-$ kss-node --init -t="src/"
+$ gulp
 ```
