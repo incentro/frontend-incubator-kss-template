@@ -1,7 +1,4 @@
-// build
-// build:style
-// build dest
-"use strict";
+'use strict';
 
 let gulp = require('gulp');
 let $ = require('gulp-load-plugins')();
