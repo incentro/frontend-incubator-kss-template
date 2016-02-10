@@ -1,13 +1,13 @@
 'use strict';
 
-let gulp = require('gulp');
-let $ = require('gulp-load-plugins')();
-let runSequence = require('run-sequence');
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');
 
-let yargs = require('yargs').argv;
-let minify = yargs.minify ? true : false;
+var yargs = require('yargs').argv;
+var minify = yargs.minify ? true : false;
 
-let config = {
+var config = {
 	autoprefix: {
 		support: 'last 2 versions, Explorer >= 8, Firefox >= 25'
 	},
