@@ -9,5 +9,8 @@
   },
   "author": "Kasper Reijnders <kasper.reijnders@incentro.com>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/incentro-ondemand/frontend-pattern-library-template#readme"
+  "homepage": "https://bitbucket.org/incentro-ondemand/frontend-pattern-library-template#readme",
+  "devDependencies": {
+    "kss": "^2.4.0"
+  }
 }
