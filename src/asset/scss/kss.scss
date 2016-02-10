@@ -1,3 +1,11 @@
+$brand-color: #F58233;
+$black-80: #333333;
+$black-60: #666666;
+$spot-1: #c8d6d1;
+$spot-2: #a4d7bd;
+$spot-3: #a2dcea;
+$spot-4: #73b1c0;
+
 // ------------------------------------------------------------------------------
 //   @group Variables - Colors, Fonts, etc.
 // ------------------------------------------------------------------------------
@@ -198,10 +206,10 @@ $kss-vertical-rhythm       : $kss-font-size * 1.5;
       overflow: auto;
       padding: 0 10px 0 20px;
       border-bottom: 0;
-      background-image: url(noise-low.png), -webkit-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -o-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -ms-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), radial-gradient(#fff, #eee);
+      background-image: url(../image/noise-low.png), -webkit-radial-gradient(#fff, #eee);
+      background-image: url(../image/noise-low.png), -o-radial-gradient(#fff, #eee);
+      background-image: url(../image/noise-low.png), -ms-radial-gradient(#fff, #eee);
+      background-image: url(../image/noise-low.png), radial-gradient(#fff, #eee);
       box-shadow: inset -10px 0px 10px -10px rgba(0,0,0,0.7)    }
   }
 }
