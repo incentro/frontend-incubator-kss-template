@@ -1,0 +1,13 @@
+{
+  "name": "frontend-pattern-library-template",
+  "version": "1.0.0",
+  "description": "The Frontend Pattern Library Template is a KSS template for the Frontend Incubator. ",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git://bitbucket.org/incentro-ondemand/frontend-pattern-library-template.git"
+  },
+  "author": "Kasper Reijnders <kasper.reijnders@incentro.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/incentro-ondemand/frontend-pattern-library-template#readme"
+}
