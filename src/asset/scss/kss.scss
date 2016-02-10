@@ -206,10 +206,10 @@ $kss-vertical-rhythm       : $kss-font-size * 1.5;
       overflow: auto;
       padding: 0 10px 0 20px;
       border-bottom: 0;
-      background-image: url(../image/noise-low.png), -webkit-radial-gradient(#fff, #eee);
-      background-image: url(../image/noise-low.png), -o-radial-gradient(#fff, #eee);
-      background-image: url(../image/noise-low.png), -ms-radial-gradient(#fff, #eee);
-      background-image: url(../image/noise-low.png), radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), -webkit-radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), -o-radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), -ms-radial-gradient(#fff, #eee);
+      background-image: url(noise-low.png), radial-gradient(#fff, #eee);
       box-shadow: inset -10px 0px 10px -10px rgba(0,0,0,0.7)    }
   }
 }
