@@ -23,5 +23,8 @@
     "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.0.6",
     "run-sequence": "^1.1.5"
+  },
+  "publishConfig": {
+    "registry": "http://developer.incentro.com/nexus/content/repositories/frontend-repo/"
   }
 }
