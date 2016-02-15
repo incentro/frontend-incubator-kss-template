@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git://bitbucket.org/incentro-ondemand/frontend-pattern-library-template.git"
   },
+  "scripts": {
+    "postinstall": "node gulp"
+  },
   "author": "Kasper Reijnders <kasper.reijnders@incentro.com>",
   "license": "ISC",
   "homepage": "https://bitbucket.org/incentro-ondemand/frontend-pattern-library-template#readme",
