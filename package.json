@@ -8,7 +8,7 @@
     "url": "git://github.com/incentro/frontend-incubator-kss-template.git"
   },
   "scripts": {
-    "postinstall": "npm install && gulp"
+    "postinstall": "gulp"
   },
   "author": "Incentro <frontend@incentro.com>",
   "license": "MIT",
