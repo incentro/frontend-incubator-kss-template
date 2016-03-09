@@ -5,14 +5,14 @@
   "main": "",
   "repository": {
     "type": "git",
-    "url": "git://bitbucket.org/incentro-ondemand/frontend-pattern-library-template.git"
+    "url": "git://github.com/incentro/frontend-incubator-kss-template.git"
   },
   "scripts": {
     "postinstall": "gulp"
   },
-  "author": "Kasper Reijnders <kasper.reijnders@incentro.com>",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/incentro-ondemand/frontend-pattern-library-template#readme",
+  "author": "Incentro <frontend@incentro.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/incentro/frontend-incubator-kss-template/",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -26,8 +26,5 @@
     "gulp-plumber": "^1.1.0",
     "gulp-ruby-sass": "^2.0.6",
     "run-sequence": "^1.1.5"
-  },
-  "publishConfig": {
-    "registry": "http://developer.incentro.com/nexus/content/repositories/frontend-repo/"
   }
 }
