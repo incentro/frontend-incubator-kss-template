@@ -1,6 +1,6 @@
 {
   "name": "frontend-incubator-kss-template",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "The Frontend Incubator KSS Template is a KSS template for the Frontend Incubator. ",
   "main": "build/index.js",
   "repository": {
