@@ -1,6 +1,7 @@
 'use strict';
 
 let gulp = require('gulp');
+
 let $ = require('gulp-load-plugins')();
 let runSequence = require('run-sequence');
 
@@ -13,51 +14,41 @@ let config = {
 	},
 	path: {
 		src: {
-			asset: {
-				image: 'src/asset/image',
-				javascript: 'src/asset/javascript',
-				scss: 'src/asset/scss',
-				html: 'src/asset/html'
-			}
+			asset: 'src/kss-assets',
+			helpers: 'src/helpers',
+			root: 'src'
 		},
 		build: {
-			asset: {
-				image: 'build/public',
-				javascript: 'build/public',
-				css: 'build/public',
-				html: 'build'
-			}
+			asset: 'build/kss-assets',
+			helpers: 'build/helpers',
+			root: 'build'
+
 		}
 	}
 };
 
-gulp.task('build:asset:image', () => {
-	return gulp.src(config.path.src.asset.image + '/**/*')
-		.pipe($.plumber())
-		// optimizes image file if possible
-		.pipe($.cache($.imagemin({
-			progressive: true,
-			interlaced: true
-		})))
-		.pipe(gulp.dest(config.path.build.asset.image));
+gulp.task('copy:assets', () => {
+	return gulp.src([config.path.src.asset + '/**', '!' + config.path.src.asset + '/*.scss'])
+		.pipe(gulp.dest(config.path.build.asset));
 });
 
-gulp.task('build:asset:javascript', () => {
-	return gulp.src([config.path.src.asset.javascript + '/*.js'])
-		.pipe(gulp.dest(config.path.build.asset.javascript));
+gulp.task('copy:helpers', () => {
+	return gulp.src([config.path.src.helpers + '/**'])
+		.pipe(gulp.dest(config.path.build.helpers));
 });
 
-gulp.task('build:asset:scss', () => {
-	return $.rubySass(config.path.src.asset.scss + '/*.scss', {
+
+gulp.task('copy:root', () => {
+	return gulp.src([config.path.src.root + '/*.*'])
+		.pipe(gulp.dest(config.path.build.root));
+});
+
+gulp.task('build:scss', () => {
+	return gulp.src(config.path.src.asset + '/*.scss')
+		.pipe($.sass({
 			precision: 8,
-			loadPath: [
-				config.path.src.asset.scss
-			],
 			sourcemap: false
-		})
-		.on('error', (error) => {
-			console.log(error);
-		})
+		}))
 
 		.pipe($.plumber())
 
@@ -69,31 +60,19 @@ gulp.task('build:asset:scss', () => {
 		// minifies css if minify property is enabled
 		.pipe($.if(minify, $.cssnano()))
 
-		.pipe(gulp.dest(config.path.build.asset.css));
+		.pipe(gulp.dest(config.path.build.asset));
 });
 
-gulp.task('build:asset:html', () => {
-	return gulp.src(config.path.src.asset.html + '/**/*')
-		.pipe($.plumber())
-		.pipe(gulp.dest(config.path.build.asset.html));
-});
-
-gulp.task('build:asset', (callback) => {
-	runSequence(
-		//'build:asset:font',
-		'build:asset:image',
-		'build:asset:javascript',
-		'build:asset:scss',
-		'build:asset:html',
-		callback
-	);
-});
 
 gulp.task('build', (callback) => {
 	runSequence(
-		'build:asset',
+		'copy:root',
+		'copy:assets',
+		'copy:helpers',
+		'build:scss',
 		callback
 	);
 });
+
 
 gulp.task('default', ['build']);
