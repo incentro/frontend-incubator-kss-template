@@ -1,6 +1,6 @@
 {
   "name": "frontend-incubator-kss-template",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "The Frontend Incubator KSS Template is a KSS template for the Frontend Incubator. ",
   "main": "build/index.js",
   "repository": {
@@ -20,7 +20,6 @@
     "gulp-cssnano": "^2.1.0",
     "gulp-if": "^2.0.0",
     "gulp-ignore": "^2.0.1",
-    "gulp-imagemin": "^2.4.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-minify": "0.0.5",
     "gulp-plumber": "^1.1.0",
